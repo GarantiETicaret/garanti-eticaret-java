@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd"
+>
+
+	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+
+	<!-- Most controllers will use the ControllerClassNameHandlerMapping above, but for the index controller we are using ParameterizableViewController, 
+		so we must define an explicit mapping for it. -->
+	<bean
+		id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"
+	>
+		<property name="mappings">
+			<props>
+				<prop key="index.htm">IndexController</prop>
+				<prop key="saleswithproductinfo.htm">SalesWithProductInfoController</prop>
+				<prop key="saleswith_addressinfo.htm">SalesWithAddressInfoController</prop>
+				<prop key="installment_sales.htm">InstallmentSalesController</prop>
+				<prop key="void.htm">VoidController</prop>
+				<prop key="refund.htm">RefundController</prop>
+				<prop key="delaysales.htm">DelaySalesController</prop>
+				<prop key="downpayment_sales.htm">DownPaymentSalesController</prop>
+				<prop key="rewardsales.htm">RewardSalesController</prop>
+				<prop key="firmrewardsales.htm">FirmRewardSalesController</prop>
+                                <prop key="playerchequesales.htm">PlayerChequeSalesController</prop>
+                                <prop key="productcheque.htm">ProductChequeController</prop>
+                                <prop key="preauth.htm">PreauthController</prop>
+                                <prop key="postauth.htm">PostauthController</prop>
+                                <prop key="extented_creditsales.htm">ExtentedCreditSalesController</prop>
+                                <prop key="dcc_sales.htm">DCCSalesController</prop>
+                                <prop key="extrepreauth.htm">ExtrePreauthController</prop>
+                                <prop key="extrepostauth.htm">ExtrePostauthController</prop>
+                                <prop key="firmcardrel.htm">FirmCardRelController</prop>
+                                
+                                <prop key="firmcardsales.htm">FirmCardSalesController</prop>
+                                <prop key="firmcardpreauth.htm">FirmCardPreauthController</prop>
+                                <prop key="commercialcardextendedcredit.htm">CommercialCardExtendedCreditController</prop>
+                                <prop key="commercialcardpreauth.htm">CommercialCardPreauthController</prop>
+                                <prop key="sms_preauth.htm">SMSPreauthController</prop>
+                                <prop key="sms_postauth.htm">SMSPostauthController</prop>
+                                <prop key="recurring_sales.htm">RecurringSalesController</prop>
+                                <prop key="vrecurring_sales.htm">VRecurringSalesController</prop>
+                                <prop key="recurring_void.htm">RecurringVoidController</prop>
+                                <prop key="recurring_update.htm">RecurringUpdateController</prop>
+                                <prop key="utility_payment.htm">UtilityPaymentController</prop>
+                                <prop key="gsmunit_sales.htm">GsmUnitSalesController</prop>
+                                
+                                <prop key="rewardinquiry.htm">RewardInquiryController</prop>
+                                <prop key="extended_creditinquiry.htm">ExtendedCreditInquiryController</prop>
+                                <prop key="commercial_cardlimitinq.htm">CommercialCardLimitInqController</prop>
+                                <prop key="dcc_inquiry.htm">DccInquiryController</prop>
+                                <prop key="utility_paymentinq.htm">UtilityPaymentInqController</prop>
+                                <prop key="gsm_unitinq.htm">GsmUnitInqController</prop>
+                                <prop key="identityinq.htm">IdentityInqController</prop>
+                                
+                                <prop key="orderinq.htm">OrderInqController</prop>
+                                <prop key="orderhistoryinq.htm">OrderHistoryInqController</prop>
+                                <prop key="orderlistinq.htm">OrderListInqController</prop>
+                                <prop key="batchinq.htm">BatchInqController</prop>
+                                <prop key="bininq.htm">BINInqController</prop>
+                                <prop key="orderiteminq.htm">OrderItemInqController</prop>
+                                <prop key="cardtxnlistinq.htm">CardtxnListInqController</prop>
+                                <prop key="settlementinq.htm">SettlementInqController</prop>
+                                <prop key="saleswithcommentinfo.htm">SalesWithCommentInfoController</prop>
+                                <prop key="sale3dsecure.htm">Sale3DSecureController</prop>
+                                <prop key="sale3doospay.htm">Sale3DOOSPayController</prop>
+                                <prop key="sale3dpay.htm">Sale3DPayController</prop>
+                                <prop key="saleoospay.htm">SaleOOSPayController</prop>
+                                <prop key="success.htm">Sale3DSuccessController</prop>
+                                <prop key="error.htm">Sale3DErrorController</prop>
+                                <prop key="garantipay.htm">GarantiPayController</prop>
+                                <prop key="garantipayvoid.htm">GarantiPayVoidController</prop>
+                                <prop key="garantipaymo.htm">GarantiPayMOController</prop>
+                                <prop key="garantipayapp.htm">GarantiPayAppController</prop>
+                                <prop key="oossuccess.htm">OOSSuccessController</prop>                               
+                                <prop key="ooserror.htm">OOSErrorController</prop>  
+                                <prop key="garantipaysuccess.htm">GarantiSuccessController</prop>                               
+                                <prop key="garantipayerror.htm">GarantiErrorController</prop> 
+
+
+			</props>
+		</property>
+	</bean>
+
+	<bean
+		id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/jsp/"
+		p:suffix=".jsp" />
+
+	<!-- The index controller. -->
+	<bean
+		name="IndexController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="index" />
+
+	<bean
+		name="SalesWithProductInfoController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="saleswithproductinfo" />
+        
+        <bean
+		name="SalesWithAddressInfoController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="saleswith_addressinfo" />
+        <bean
+		name="InstallmentSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="installment_sales" />
+        <bean
+		name="VoidController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="void" />
+           
+         <bean
+		name="RefundController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="refund" />
+             
+         <bean
+		name="DelaySalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="delaysales" />
+        <bean
+		name="DownPaymentSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="downpayment_sales" />
+	<bean
+		name="RewardSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="rewardsales" />
+        <bean
+		name="FirmRewardSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="firmrewardsales" />
+         <bean
+		name="PlayerChequeSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="playerchequesales" />
+        <bean
+		name="ProductChequeController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="productcheque" />
+        <bean
+		name="PreauthController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="preauth" />
+        <bean
+		name="PostauthController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="postauth" />
+        <bean
+		name="ExtentedCreditSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="extented_creditsales" />
+        <bean
+		name="DCCSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="dcc_sales" />
+        <bean
+		name="ExtrePreauthController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="extrepreauth" />
+        <bean
+		name="ExtrePostauthController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="extrepostauth" />
+        <bean
+		name="FirmCardRelController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="firmcardrel" />
+        
+         <bean
+		name="FirmCardSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="firmcardsales" />
+         <bean
+		name="FirmCardPreauthController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="firmcardpreauth" />
+         <bean
+		name="CommercialCardExtendedCreditController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="commercialcardextendedcredit" />
+         
+         <bean
+		name="CommercialCardPreauthController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="commercialcardpreauth" />
+         <bean
+		name="SMSPreauthController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="sms_preauth" />
+          <bean
+		name="SMSPostauthController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="sms_postauth" />
+          <bean
+		name="RecurringSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="recurring_sales" />
+          <bean
+		name="VRecurringSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="vrecurring_sales" />
+          <bean
+		name="RecurringVoidController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="recurring_void" />
+          
+          <bean
+		name="RecurringUpdateController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="recurring_update" />
+           <bean
+		name="UtilityPaymentController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="utility_payment" />
+            <bean
+		name="GsmUnitSalesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="gsmunit_sales" />
+            
+             <bean
+		name="RewardInquiryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="rewardinquiry" />
+            <bean
+		name="ExtendedCreditInquiryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="extended_creditinquiry" />
+            <bean
+		name="CommercialCardLimitInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="commercial_cardlimitinq" />
+            <bean
+		name="DccInquiryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="dcc_inquiry" />
+            <bean
+		name="UtilityPaymentInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="utility_paymentinq" />
+
+            <bean
+		name="GsmUnitInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="gsm_unitinq" />
+            
+            <bean
+		name="IdentityInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="identityinq" />
+            
+             <bean
+		name="OrderInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="orderinq" />
+             <bean
+		name="OrderHistoryInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="orderhistoryinq" />
+              <bean
+		name="OrderListInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="orderlistinq" />
+              <bean
+		name="BatchInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="batchinq" />
+              <bean
+		name="BINInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="bininq" />
+              <bean
+		name="OrderItemInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="orderiteminq" />
+              <bean
+		name="CardtxnListInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="cardtxnlistinq" />
+              <bean
+		name="SettlementInqController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="settlementinq" />
+              <bean
+		name="SalesWithCommentInfoController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="saleswithcommentinfo" />
+              <bean
+		name="Sale3DSecureController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="sale3dsecure" />
+              <bean
+		name="Sale3DOOSPayController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="sale3doospay" />
+              <bean
+		name="Sale3DPayController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="sale3dpay" />
+
+              <bean
+		name="SaleOOSPayController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="saleoospay" />
+              <bean
+		name="Sale3DSuccessController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="Success" />
+              <bean
+		name="GarantiPayController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="garantipay" />
+              <bean
+		name="GarantiPayVoidController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="garantipayvoid" />
+              <bean
+		name="GarantiPayMOController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="garantipaymo" />
+              <bean
+		name="GarantiPayAppController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="garantipayapp" />
+              <bean
+		name="Sale3DErrorController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="Error" />
+              <bean
+		name="OOSErrorController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="OOSError" />
+              <bean
+		name="OOSSuccessController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="OOSSuccess" />
+              <bean
+		name="GarantiSuccessController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="GarantiPaySuccess" />
+              <bean
+		name="GarantiErrorController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="GarantiPayError" />
+</beans>
