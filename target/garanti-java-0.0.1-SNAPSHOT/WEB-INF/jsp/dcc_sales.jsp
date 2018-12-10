@@ -122,7 +122,7 @@
                 dccSalesRequest.Terminal.MerchantID="3424113";
                 
                 dccSalesRequest.Customer= new Customer();
-                dccSalesRequest.Customer.EmailAddr="fatih@codevist.com";
+                dccSalesRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 dccSalesRequest.Customer.IPAddress="127.0.0.1";
                 
                 

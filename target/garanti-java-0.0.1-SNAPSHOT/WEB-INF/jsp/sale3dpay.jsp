@@ -111,7 +111,7 @@
             //TODO: ERROR ADRESÝNÝ GÜNCELLE.
             sale3DPayRequest.successurl = "http://localhost:8084/garanti-java/oossuccess.htm";
             sale3DPayRequest.errorurl = "http://localhost:8084/garanti-java/ooserror.htm";
-            sale3DPayRequest.customeremailaddress = "fatih@codevist.com";
+            sale3DPayRequest.customeremailaddress = "eticaret@garanti.com.tr";
             sale3DPayRequest.customeripaddress = "127.0.0.1";
             sale3DPayRequest.secure3dsecuritylevel = request.getParameter("secure3dsecuritylevel");
             sale3DPayRequest.orderid = request.getParameter("orderID");
@@ -130,10 +130,10 @@
             
                            
                 
-               String form = Sale3DPayRequest.execute(sale3DPayRequest,settings3D); //"Tarih aralýðý ile Ýþlem Sorgulama servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
-               		out.println(form);
+               String form = Sale3DPayRequest.execute(sale3DPayRequest,settings3D); //"3D Pay Ödeme servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
+               out.println(form);//"3D Pay Ödeme servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
 
-                //"Tarih aralýðý ile Ýþlem Sorgulama servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
+                
 	}
 %>
 

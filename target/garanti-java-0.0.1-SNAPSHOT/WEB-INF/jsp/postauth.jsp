@@ -105,7 +105,7 @@
                 postauthRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 postauthRequest.Customer= new Customer();
-                postauthRequest.Customer.EmailAddr="fatih@codevist.com";
+                postauthRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 postauthRequest.Customer.IPAddress="127.0.0.1";
                 
                 

@@ -97,7 +97,7 @@
                 recurringVoidRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 recurringVoidRequest.Customer= new Customer();
-                recurringVoidRequest.Customer.EmailAddr="fatih@codevist.com";
+                recurringVoidRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 recurringVoidRequest.Customer.IPAddress="127.0.0.1";
                 
                 

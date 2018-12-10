@@ -111,7 +111,7 @@
                         secure3DSuccessRequest.Card=c;
 
                         Customer customer = new Customer();
-                        customer.EmailAddr = secure3DResponse.customerEmailAddress;
+                        customer.EmailAddress = secure3DResponse.customerEmailAddress;
                         customer.IPAddress = secure3DResponse.customerIpAddres;
 
                         secure3DSuccessRequest.Customer=customer;

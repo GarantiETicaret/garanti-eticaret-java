@@ -112,7 +112,7 @@
                 firmRewardSalesRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 firmRewardSalesRequest.Customer= new Customer();
-                firmRewardSalesRequest.Customer.EmailAddr="fatih@codevist.com";
+                firmRewardSalesRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 firmRewardSalesRequest.Customer.IPAddress="127.0.0.1";
                 
                 

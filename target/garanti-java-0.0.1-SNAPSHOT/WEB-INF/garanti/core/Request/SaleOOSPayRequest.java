@@ -70,21 +70,19 @@ public class SaleOOSPayRequest {
    
    @XmlElement(name = "storekey")
       public String storekey ; 
-   
-   @XmlElement(name = "cardnumber")
-      public String cardnumber ; 
-   
-   @XmlElement(name = "cardexpiredatemonth")
-      public String cardexpiredatemonth ; 
-   
-   @XmlElement(name = "cardexpiredateyear")
-      public String cardexpiredateyear ; 
-   
-   @XmlElement(name = "cardcvv2")
-      public String cardcvv2 ; 
-   
+  
    @XmlElement(name = "txntimestamp")
       public String txntimestamp ; 
+   
+   @XmlElement(name = "refreshtime")
+      public String refreshtime ; 
+   
+   @XmlElement(name = "lang")
+      public String lang ; 
+   
+   @XmlElement(name = "companyname")
+      public String companyname ; 
+   
    
    public static String execute(SaleOOSPayRequest request, Settings3D settings3D) 
         {
@@ -108,14 +106,13 @@ public class SaleOOSPayRequest {
             Data.put("customeripaddress", request.customeripaddress);
             Data.put("secure3dhash", request.secure3dhash);
             Data.put("txntimestamp", request.txntimestamp);
-            Data.put("cardnumber", request.cardnumber);
-            Data.put("cardexpiredatemonth", request.cardexpiredatemonth);
-            Data.put("cardexpiredateyear", request.cardexpiredateyear);
-            Data.put("cardcvv2", request.cardcvv2);
-            Data.put("storekey", request.storekey);
+            Data.put("refreshtime", request.refreshtime);
+            Data.put("lang", request.lang);
+            Data.put("companyname", request.companyname);
 
             return PreparePOSTForm.PreparePost(settings3D.BaseUrl, Data);
         }
+   //Hashing
         public static String Compute3DHash(SaleOOSPayRequest request, Settings3D settings3D) 
         {
   

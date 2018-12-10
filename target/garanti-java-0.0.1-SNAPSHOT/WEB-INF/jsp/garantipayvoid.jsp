@@ -82,27 +82,27 @@
 		   Tarih aralýðý ile Ýþlem Sorgulama servis çaðrýsýnýn yapýldýðý alaný temsil etmektedir.
 		  
 		*/
-		Settings settings = new Settings();
-		Terminal terminal= new Terminal();
+            Settings settings = new Settings();
+	    Terminal terminal= new Terminal();
 
-		GarantiPayVoidRequest garantiPayVoidRequest = new GarantiPayVoidRequest();  
+	    GarantiPayVoidRequest garantiPayVoidRequest = new GarantiPayVoidRequest();  
             garantiPayVoidRequest.Version = settings.Version;
             garantiPayVoidRequest.Mode = settings.Mode;
             
-		garantiPayVoidRequest.Terminal=new Terminal();
+	    garantiPayVoidRequest.Terminal=new Terminal();
             garantiPayVoidRequest.Terminal.ProvUserID=terminal.ProvUserID;
-                garantiPayVoidRequest.Terminal.UserID=terminal.UserID;
-                garantiPayVoidRequest.Terminal.ID=terminal.ID;
-                garantiPayVoidRequest.Terminal.MerchantID=terminal.MerchantID;
+            garantiPayVoidRequest.Terminal.UserID=terminal.UserID;
+            garantiPayVoidRequest.Terminal.ID=terminal.ID;
+            garantiPayVoidRequest.Terminal.MerchantID=terminal.MerchantID;
                          //TODO: ERROR ADRESÝNÝ GÜNCELLE.
-             garantiPayVoidRequest.Card= new Card();            
+            garantiPayVoidRequest.Card= new Card();            
             garantiPayVoidRequest.Card.CVV2="";
             garantiPayVoidRequest.Card.ExpireDate = "";
             garantiPayVoidRequest.Card.Number = "";
             
             garantiPayVoidRequest.Customer= new Customer();
 
-            garantiPayVoidRequest.Customer.EmailAddr = "fatih@codevist.com";
+            garantiPayVoidRequest.Customer.EmailAddress = "eticaret@garanti.com.tr";
             garantiPayVoidRequest.Customer.IPAddress = "127.0.0.1";
             
             garantiPayVoidRequest.Order= new Order();
@@ -128,12 +128,12 @@
             
                            
                 
-               String payVoidResponse = GarantiPayVoidRequest.execute(garantiPayVoidRequest,settings); //Sipariþ Detayý servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
-               StringWriter sw = new StringWriter();
-               JAXB.marshal(payVoidResponse, sw);
-               out.println("<pre>" + Helper.prettyPrintXml(sw.toString()) + "</pre>");
+            String payVoidResponse = GarantiPayVoidRequest.execute(garantiPayVoidRequest,settings); //Garanti Pay Ýptal servis çaðýrýsýný temsil eder."
+            StringWriter sw = new StringWriter();
+            JAXB.marshal(payVoidResponse, sw);
+            out.println("<pre>" + Helper.prettyPrintXml(sw.toString()) + "</pre>");//"Garanti Pay Ýptal servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
 
-                //"Tarih aralýðý ile Ýþlem Sorgulama servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
+                
 	}
 %>
 

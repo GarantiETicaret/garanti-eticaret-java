@@ -30,6 +30,7 @@ public class Secure3DSuccessRequest extends VPOSRequest{
             return RestHttpCaller.getInstance().postXML(settings.BaseUrl, request);
         }
     
+    //Hashing
     public static String Compute3DHash(Secure3DSuccessRequest request, Settings settings) 
         {
   
@@ -50,7 +51,7 @@ sb.append(hashedPassword);
             return sb.toString();
             
         }
-    
+    //Validation
     public static boolean Validate3DReturn(String hashString, String validHash) throws UnsupportedEncodingException
         {
             //SHA1 sha = new SHA1CryptoServiceProvider();
@@ -59,7 +60,7 @@ sb.append(hashedPassword);
                 return true;
             return false;
         }
-    
+    //Hashing
     public static String generateHashForValidate(String input ) throws UnsupportedEncodingException
     {
         try

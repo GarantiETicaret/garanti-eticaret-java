@@ -125,7 +125,7 @@
                 garantiPayAppRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 garantiPayAppRequest.Customer= new Customer();
-                garantiPayAppRequest.Customer.EmailAddr="fatih@codevist.com";
+                garantiPayAppRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 garantiPayAppRequest.Customer.IPAddress="127.0.0.1";
                 
                 
@@ -169,7 +169,7 @@
                garantipay.InstallmentOnlyForCommercialCard = "N";
                garantipay.TotalInstallmentCount = "2";
                garantipay.GPInstallmentsList = list;
-              
+               garantipay.ReturnUrl = "https://abc.abc.com/abc";
                        
                        
                        
@@ -183,14 +183,14 @@
                garantiPayAppRequest.Transaction.CardholderPresentCode = "0";
                garantiPayAppRequest.Transaction.SubType = "sales";
 
-               garantiPayAppRequest.Transaction.ReturnServerUrl = "";
+               garantiPayAppRequest.Transaction.ReturnServerUrl = "https://abc.abc.com/abc";
                garantiPayAppRequest.Transaction.GarantiPaY=garantipay;
                
                
-               String GarantiPayAppResponse= GarantiPayAppRequest.execute(garantiPayAppRequest,settings); //ürün Bilgileri ile Satýnalma iþlemi servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
+               String GarantiPayAppResponse= GarantiPayAppRequest.execute(garantiPayAppRequest,settings); //Garanti Pay App Ödeme servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
                StringWriter sw = new StringWriter();
                JAXB.marshal(GarantiPayAppResponse, sw);
-               out.println("<pre>" + Helper.prettyPrintXml(sw.toString()) + "</pre>"); //"Ürün Bilgileri ile Satýnalma iþlemi servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
+               out.println("<pre>" + Helper.prettyPrintXml(sw.toString()) + "</pre>"); //"Garanti Pay App Ödeme servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
 	}
 %>
 

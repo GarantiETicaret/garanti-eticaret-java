@@ -77,7 +77,7 @@
             //TODO: ERROR ADRESÝNÝ GÜNCELLE.
             garantiPayRequest.successurl = "http://localhost:8084/garanti-java/garantipaysuccess.htm";
             garantiPayRequest.errorurl = "http://localhost:8084/garanti-java/garantipayerror.htm";
-            garantiPayRequest.customeremailaddress = "fatih@codevist.com";
+            garantiPayRequest.customeremailaddress = "eticaret@garanti.com.tr";
             garantiPayRequest.customeripaddress = "127.0.0.1";
             garantiPayRequest.secure3dsecuritylevel = "CUSTOM_PAY";
             garantiPayRequest.orderid = request.getParameter("orderID");
@@ -107,10 +107,10 @@
             
                            
                 
-               String form = GarantiPayRequest.execute(garantiPayRequest,settings3D); //"Tarih aralýðý ile Ýþlem Sorgulama servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
-               		out.println(form);
+            String form = GarantiPayRequest.execute(garantiPayRequest,settings3D); //"Garanti Pay Ödeme servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
+            out.println(form);//"Garanti Pay Ödeme servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
 
-                //"Tarih aralýðý ile Ýþlem Sorgulama servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
+                
 	}
 %>
 

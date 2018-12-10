@@ -84,7 +84,7 @@
                 binInqRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 binInqRequest.Customer= new Customer();
-                binInqRequest.Customer.EmailAddr="fatih@codevist.com";
+                binInqRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 binInqRequest.Customer.IPAddress="127.0.0.1";
                 
                 

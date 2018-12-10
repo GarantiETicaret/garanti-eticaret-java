@@ -112,14 +112,7 @@ public class Sale3DSecureRequest {
             //return RestHttpCaller.Create().PostXMLString(settings3D.BaseUrl, request);
         }
 
-   public static String leftPad(String originalString, int length,
-         char padCharacter) {
-      String paddedString = originalString;
-      while (paddedString.length() < length) {
-         paddedString = padCharacter + paddedString;
-      }
-      return paddedString;
-   }
+
    
         public static String Compute3DHash(Sale3DSecureRequest request, Settings3D settings3D)
         {
@@ -140,6 +133,7 @@ sb.append(hashedPassword);
 
         }
 
+        //Form Oluþturma
         public static String CreateThreeDPaymentForm(Sale3DSecureRequest request, Settings3D settings3D)
         {
            

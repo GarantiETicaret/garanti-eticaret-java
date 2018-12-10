@@ -100,7 +100,7 @@
                 refundRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 refundRequest.Customer= new Customer();
-                refundRequest.Customer.EmailAddr="fatih@codevist.com";
+                refundRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 refundRequest.Customer.IPAddress="127.0.0.1";
                 
                 

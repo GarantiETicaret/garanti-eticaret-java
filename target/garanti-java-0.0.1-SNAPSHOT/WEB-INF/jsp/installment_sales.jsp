@@ -110,7 +110,7 @@
                installmentSalesRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                installmentSalesRequest.Customer= new Customer();
-               installmentSalesRequest.Customer.EmailAddr="fatih@codevist.com";
+               installmentSalesRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                installmentSalesRequest.Customer.IPAddress="127.0.0.1";
                 
                 

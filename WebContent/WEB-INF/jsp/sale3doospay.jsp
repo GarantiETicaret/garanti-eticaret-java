@@ -41,30 +41,7 @@
                 </select>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Kart Numarasý:</label>
-            <div class="col-md-4">
-                <input value="4282209004348015" name="creditCardNo" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Son Kullanma Tarihi / Ay: </label>
-            <div class="col-md-4">
-                <input value="08 " name="expireMonth" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Son Kullanma Tarihi / Yýl: </label>
-            <div class="col-md-4">
-                <input value="22 " name="expireYear" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  CVC: </label>
-            <div class="col-md-4">
-                <input value="123" name="cvv" class="form-control input-md">
-            </div>
-        </div>
+  
         <div class="form-group">
             <label class="col-md-4 control-label" for="">  OrderID:</label>
             <div class="col-md-4">
@@ -106,7 +83,6 @@
             sale3DOOSPayRequest.terminaluserid = "PROVOOS";
             sale3DOOSPayRequest.terminalprovuserid = "PROVOOS";
             sale3DOOSPayRequest.terminalmerchantid = "7000679";
-            //TODO: ERROR ADRESÝNÝ GÜNCELLE.
             sale3DOOSPayRequest.successurl = "http://localhost:8084/garanti-java/oossuccess.htm";
             sale3DOOSPayRequest.errorurl = "http://localhost:8084/garanti-java/ooserror.htm";
             sale3DOOSPayRequest.customeremailaddress = "eticaret@garanti.com.tr";
@@ -119,13 +95,10 @@
             sale3DOOSPayRequest.txncurrencycode = "949";
             sale3DOOSPayRequest.storekey = "12345678";
             sale3DOOSPayRequest.txntimestamp = Instant.now().toString();
-            sale3DOOSPayRequest.cardnumber = request.getParameter("creditCardNo");
-            sale3DOOSPayRequest.cardexpiredatemonth = request.getParameter("expireMonth");
-            sale3DOOSPayRequest.cardexpiredateyear = request.getParameter("expireYear");
-            sale3DOOSPayRequest.cardcvv2 = request.getParameter("cvv");
+   
             sale3DOOSPayRequest.lang = "tr";
             sale3DOOSPayRequest.refreshtime = "5";
-            
+             sale3DOOSPayRequest.companyname = "deneme";
             
                            
                 

@@ -32,31 +32,7 @@
         <!-- Form Name -->
         <legend><label style="font-weight:bold;width:250px;">Ödeme Bilgileri</label></legend>
         <!-- Text input-->
-        
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Kart Numarasý:</label>
-            <div class="col-md-4">
-                <input value="4282209004348015" name="creditCardNo" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Son Kullanma Tarihi / Ay: </label>
-            <div class="col-md-4">
-                <input value="08 " name="expireMonth" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Son Kullanma Tarihi / Yýl: </label>
-            <div class="col-md-4">
-                <input value="22 " name="expireYear" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  CVC: </label>
-            <div class="col-md-4">
-                <input value="123" name="cvv" class="form-control input-md">
-            </div>
-        </div>
+     
         <div class="form-group">
             <label class="col-md-4 control-label" for="">  OrderID:</label>
             <div class="col-md-4">
@@ -112,10 +88,9 @@
             saleOOSPayRequest.txncurrencycode = "949";
             saleOOSPayRequest.storekey = "12345678";
             saleOOSPayRequest.txntimestamp = Instant.now().toString();
-            saleOOSPayRequest.cardnumber = request.getParameter("creditCardNo");
-            saleOOSPayRequest.cardexpiredatemonth = request.getParameter("expireMonth");
-            saleOOSPayRequest.cardexpiredateyear = request.getParameter("expireYear");
-            saleOOSPayRequest.cardcvv2 = request.getParameter("cvv");
+            saleOOSPayRequest.refreshtime = "10";
+            saleOOSPayRequest.lang = "tr";
+            saleOOSPayRequest.companyname = "deneme";
             
             
             

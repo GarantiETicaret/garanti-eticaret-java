@@ -82,17 +82,7 @@ public class Sale3DOOSPayRequest {
    @XmlElement(name = "storekey")
       public String storekey ; 
    
-   @XmlElement(name = "cardnumber")
-      public String cardnumber ; 
-   
-   @XmlElement(name = "cardexpiredatemonth")
-      public String cardexpiredatemonth ; 
-   
-   @XmlElement(name = "cardexpiredateyear")
-      public String cardexpiredateyear ; 
-   
-   @XmlElement(name = "cardcvv2")
-      public String cardcvv2 ; 
+
    
    @XmlElement(name = "txntimestamp")
       public String txntimestamp ; 
@@ -102,6 +92,9 @@ public class Sale3DOOSPayRequest {
    
    @XmlElement(name = "refreshtime")
       public String refreshtime ; 
+   
+    @XmlElement(name = "companyname")
+      public String companyname ; 
    
    
    
@@ -129,11 +122,7 @@ public class Sale3DOOSPayRequest {
             Data.put("lang", request.lang);
             Data.put("refreshtime", request.refreshtime);
             Data.put("txntimestamp", request.txntimestamp);
-            Data.put("cardnumber", request.cardnumber);
-            Data.put("cardexpiredatemonth", request.cardexpiredatemonth);
-            Data.put("cardexpiredateyear", request.cardexpiredateyear);
-            Data.put("cardcvv2", request.cardcvv2);
-            Data.put("storekey", request.storekey);
+            Data.put("companyname", request.companyname);
 
             return PreparePOSTForm.PreparePost(settings3D.BaseUrl, Data);
         }

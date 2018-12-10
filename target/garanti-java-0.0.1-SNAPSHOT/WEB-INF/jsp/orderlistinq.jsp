@@ -82,7 +82,7 @@
                 orderListInqRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 orderListInqRequest.Customer= new Customer();
-                orderListInqRequest.Customer.EmailAddr="fatih@codevist.com";
+                orderListInqRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 orderListInqRequest.Customer.IPAddress="127.0.0.1";
                 
                 

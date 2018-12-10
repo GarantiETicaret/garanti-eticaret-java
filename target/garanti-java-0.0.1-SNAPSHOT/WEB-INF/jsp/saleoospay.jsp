@@ -32,31 +32,7 @@
         <!-- Form Name -->
         <legend><label style="font-weight:bold;width:250px;">Ödeme Bilgileri</label></legend>
         <!-- Text input-->
-        
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Kart Numarasý:</label>
-            <div class="col-md-4">
-                <input value="4282209004348015" name="creditCardNo" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Son Kullanma Tarihi / Ay: </label>
-            <div class="col-md-4">
-                <input value="08 " name="expireMonth" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Son Kullanma Tarihi / Yýl: </label>
-            <div class="col-md-4">
-                <input value="22 " name="expireYear" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  CVC: </label>
-            <div class="col-md-4">
-                <input value="123" name="cvv" class="form-control input-md">
-            </div>
-        </div>
+     
         <div class="form-group">
             <label class="col-md-4 control-label" for="">  OrderID:</label>
             <div class="col-md-4">
@@ -92,7 +68,7 @@
 		*/
 		Settings3D settings3D = new Settings3D();
 		
-		SaleOOSPayRequest saleOOSPayRequest = new SaleOOSPayRequest();  
+            SaleOOSPayRequest saleOOSPayRequest = new SaleOOSPayRequest();  
             saleOOSPayRequest.apiversion = settings3D.apiversion;
             saleOOSPayRequest.mode = settings3D.mode;
             saleOOSPayRequest.terminalid = "30691299";
@@ -102,7 +78,7 @@
             //TODO: ERROR ADRESÝNÝ GÜNCELLE.
             saleOOSPayRequest.successurl = "http://localhost:8084/garanti-java/oossuccess.htm";
             saleOOSPayRequest.errorurl = "http://localhost:8084/garanti-java/ooserror.htm";
-            saleOOSPayRequest.customeremailaddress = "fatih@codevist.com";
+            saleOOSPayRequest.customeremailaddress = "eticaret@garanti.com.tr";
             saleOOSPayRequest.customeripaddress = "127.0.0.1";
             saleOOSPayRequest.secure3dsecuritylevel = "OOS_PAY";
             saleOOSPayRequest.orderid = request.getParameter("orderID");
@@ -112,19 +88,18 @@
             saleOOSPayRequest.txncurrencycode = "949";
             saleOOSPayRequest.storekey = "12345678";
             saleOOSPayRequest.txntimestamp = Instant.now().toString();
-            saleOOSPayRequest.cardnumber = request.getParameter("creditCardNo");
-            saleOOSPayRequest.cardexpiredatemonth = request.getParameter("expireMonth");
-            saleOOSPayRequest.cardexpiredateyear = request.getParameter("expireYear");
-            saleOOSPayRequest.cardcvv2 = request.getParameter("cvv");
+            saleOOSPayRequest.refreshtime = "10";
+            saleOOSPayRequest.lang = "tr";
+            saleOOSPayRequest.companyname = "deneme";
             
             
             
                            
                 
-               String form = SaleOOSPayRequest.execute(saleOOSPayRequest,settings3D); //"Tarih aralýðý ile Ýþlem Sorgulama servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
-               		out.println(form);
+            String form = SaleOOSPayRequest.execute(saleOOSPayRequest,settings3D); //"OOS Pay Ödeme servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
+            out.println(form);//"OOS Pay Ödeme servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
 
-                //"Tarih aralýðý ile Ýþlem Sorgulama servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
+                
 	}
 %>
 

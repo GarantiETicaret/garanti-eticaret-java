@@ -103,7 +103,7 @@
                 dccInquiryRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 dccInquiryRequest.Customer= new Customer();
-                dccInquiryRequest.Customer.EmailAddr="fatih@codevist.com";
+                dccInquiryRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 dccInquiryRequest.Customer.IPAddress="127.0.0.1";
                 
                 

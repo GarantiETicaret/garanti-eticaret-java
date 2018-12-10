@@ -113,7 +113,7 @@
                 smsPostauthRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 smsPostauthRequest.Customer= new Customer();
-                smsPostauthRequest.Customer.EmailAddr="fatih@codevist.com";
+                smsPostauthRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 smsPostauthRequest.Customer.IPAddress="127.0.0.1";
                 
                 

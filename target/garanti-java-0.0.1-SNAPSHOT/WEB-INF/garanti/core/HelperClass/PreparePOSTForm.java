@@ -12,7 +12,7 @@ import org.apache.commons.collections.MultiMap;
  *
  * @author Codevist
  */
-
+//Form Oluþturma
 public class  PreparePOSTForm 
 {
     public static String PreparePost (String url, MultiMap data)

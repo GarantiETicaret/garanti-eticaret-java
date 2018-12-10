@@ -97,14 +97,14 @@
                 sale3DSecureRequest.apiversion=settings3D.apiversion;
                 sale3DSecureRequest.mode=settings3D.mode;
                 
-		    sale3DSecureRequest.terminalid = "30691297";
-            sale3DSecureRequest.terminaluserid = "PROVAUT";
-            sale3DSecureRequest.terminalprovuserid = "PROVAUT";
-            sale3DSecureRequest.terminalmerchantid = "7000679";
+		sale3DSecureRequest.terminalid = "30691297";
+                sale3DSecureRequest.terminaluserid = "PROVAUT";
+                sale3DSecureRequest.terminalprovuserid = "PROVAUT";
+                sale3DSecureRequest.terminalmerchantid = "7000679";
                 
                 sale3DSecureRequest.successurl = "http://localhost:8084/garanti-java/success.htm";
                 sale3DSecureRequest.errorurl = "http://localhost:8084/garanti-java/error.htm";
-                sale3DSecureRequest.customeremailaddress = "fatih@codevist.com";
+                sale3DSecureRequest.customeremailaddress = "eticaret@garanti.com.tr";
                 
                 
                 sale3DSecureRequest.customeripaddress = "127.0.0.1";
@@ -113,26 +113,26 @@
                 sale3DSecureRequest.txnamount = request.getParameter("transactionAmount");
                 
                 
-               sale3DSecureRequest.txntype = "sales";
-               sale3DSecureRequest.txninstallmentcount = "";
-               sale3DSecureRequest.txncurrencycode = "949";
+                sale3DSecureRequest.txntype = "sales";
+                sale3DSecureRequest.txninstallmentcount = "";
+                sale3DSecureRequest.txncurrencycode = "949";
              
               
                
-               sale3DSecureRequest.storekey = "12345678";
-               sale3DSecureRequest.txntimestamp =Instant.now().toString();
-               sale3DSecureRequest.cardnumber = request.getParameter("creditCardNo");
-               sale3DSecureRequest.cardexpiredatemonth = request.getParameter("expireMonth");
-               sale3DSecureRequest.cardexpiredateyear = request.getParameter("expireYear");
-               sale3DSecureRequest.cardcvv2 = request.getParameter("cvv");
+                sale3DSecureRequest.storekey = "12345678";
+                sale3DSecureRequest.txntimestamp =Instant.now().toString();
+                sale3DSecureRequest.cardnumber = request.getParameter("creditCardNo");
+                sale3DSecureRequest.cardexpiredatemonth = request.getParameter("expireMonth");
+                sale3DSecureRequest.cardexpiredateyear = request.getParameter("expireYear");
+                sale3DSecureRequest.cardcvv2 = request.getParameter("cvv");
 
-               sale3DSecureRequest.lang = "tr";
-               sale3DSecureRequest.refreshtime = "5";               
+                sale3DSecureRequest.lang = "tr";
+                sale3DSecureRequest.refreshtime = "5";               
                
                
          
-               String form= Sale3DSecureRequest.execute(sale3DSecureRequest,settings3D); // 
-               out.println(form);
+                String form= Sale3DSecureRequest.execute(sale3DSecureRequest,settings3D); //3D Secure Ýþlem servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
+                out.println(form);//"3D Secure Ýþlem servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
 	}
 %>
 

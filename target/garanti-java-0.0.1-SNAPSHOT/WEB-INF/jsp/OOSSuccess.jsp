@@ -55,14 +55,14 @@
        {
            Enumeration en = request.getParameterNames();
                     StringBuilder sb = new StringBuilder();
-while (en.hasMoreElements()) {
+        while (en.hasMoreElements()) {
 
-String parameterName = (String) en.nextElement();
+           String parameterName = (String) en.nextElement();
                 String parameterValue = request.getParameter(parameterName);
                 String value = parameterName+":"+parameterValue+"\n";
  
- sb.append(value);
-}
+           sb.append(value);
+        }
         
         StringWriter sw = new StringWriter();
                  JAXB.marshal(sb.toString(), sw);	

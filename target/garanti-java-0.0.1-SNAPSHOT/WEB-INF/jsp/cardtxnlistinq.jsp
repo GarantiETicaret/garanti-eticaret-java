@@ -91,7 +91,7 @@
                 cardtxnListInqRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 cardtxnListInqRequest.Customer= new Customer();
-                cardtxnListInqRequest.Customer.EmailAddr="fatih@codevist.com";
+                cardtxnListInqRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 cardtxnListInqRequest.Customer.IPAddress="127.0.0.1";
                 
                 

@@ -100,7 +100,7 @@
                 identityInqRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 identityInqRequest.Customer= new Customer();
-                identityInqRequest.Customer.EmailAddr="fatih@codevist.com";
+                identityInqRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 identityInqRequest.Customer.IPAddress="127.0.0.1";
                 
                 

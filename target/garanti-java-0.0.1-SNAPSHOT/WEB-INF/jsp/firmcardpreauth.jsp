@@ -90,7 +90,7 @@
                 firmCardPreauthRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 firmCardPreauthRequest.Customer= new Customer();
-                firmCardPreauthRequest.Customer.EmailAddr="fatih@codevist.com";
+                firmCardPreauthRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 firmCardPreauthRequest.Customer.IPAddress="127.0.0.1";
                 
                 

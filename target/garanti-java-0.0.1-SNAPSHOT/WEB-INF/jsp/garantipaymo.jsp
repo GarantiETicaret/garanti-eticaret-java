@@ -109,30 +109,30 @@
 		Ürün Bilgileri ile Satýnalma iþlemi servis çaðrýsýnýn yapýldýðý alaný temsil etmektedir.
 		  
 		*/
-                String orderId =  request.getParameter("orderID");
-		Settings settings = new Settings();
-		Terminal terminal= new Terminal();
+               String orderId =  request.getParameter("orderID");
+	       Settings settings = new Settings();
+	       Terminal terminal= new Terminal();
 		
-		GarantiPayMORequest garantiPayMORequest = new GarantiPayMORequest();  
+	       GarantiPayMORequest garantiPayMORequest = new GarantiPayMORequest();  
 
-                garantiPayMORequest.Version=settings.Version;
-                garantiPayMORequest.Mode=settings.Mode;
+               garantiPayMORequest.Version=settings.Version;
+               garantiPayMORequest.Mode=settings.Mode;
                 
-		garantiPayMORequest.Terminal=new Terminal();
-                garantiPayMORequest.Terminal.ProvUserID=terminal.ProvUserID;
-                garantiPayMORequest.Terminal.UserID=terminal.UserID;
-                garantiPayMORequest.Terminal.ID=terminal.ID;
-                garantiPayMORequest.Terminal.MerchantID=terminal.MerchantID;
+	       garantiPayMORequest.Terminal=new Terminal();
+               garantiPayMORequest.Terminal.ProvUserID=terminal.ProvUserID;
+               garantiPayMORequest.Terminal.UserID=terminal.UserID;
+               garantiPayMORequest.Terminal.ID=terminal.ID;
+               garantiPayMORequest.Terminal.MerchantID=terminal.MerchantID;
                 
-                garantiPayMORequest.Customer= new Customer();
-                garantiPayMORequest.Customer.EmailAddr="fatih@codevist.com";
-                garantiPayMORequest.Customer.IPAddress="127.0.0.1";
+               garantiPayMORequest.Customer= new Customer();
+               garantiPayMORequest.Customer.EmailAddress="eticaret@garanti.com.tr";
+               garantiPayMORequest.Customer.IPAddress="127.0.0.1";
                 
                 
-                garantiPayMORequest.Card= new Card();
-                garantiPayMORequest.Card.CVV2="";
-                garantiPayMORequest.Card.ExpireDate="";
-                garantiPayMORequest.Card.Number="";
+               garantiPayMORequest.Card= new Card();
+               garantiPayMORequest.Card.CVV2="";
+               garantiPayMORequest.Card.ExpireDate="";
+               garantiPayMORequest.Card.Number="";
                 
                 
                garantiPayMORequest.Order= new Order();
@@ -149,7 +149,7 @@
                item.Installmentnumber = 2;
                item.Installmentamount = "10200";
                
-              GPInstallments item2 = new GPInstallments();
+               GPInstallments item2 = new GPInstallments();
                item.Installmentnumber = 4;
                item.Installmentamount = "10400";
                
@@ -166,14 +166,12 @@
                garantipay.OrderInfo = "ürün hakkýnda bilgi içerir.";        
                garantipay.TxnTimeOutPeriod = "300";       
                garantipay.NotifSendInd = "Y";
-               
-                   garantipay.TCKN= request.getParameter("tckn");
-               
+               garantipay.TCKN= request.getParameter("tckn");
                garantipay.GSMNumber = request.getParameter("gsmNumber");
                garantipay.InstallmentOnlyForCommercialCard = "N";
                garantipay.TotalInstallmentCount = "2";
                garantipay.GPInstallmentsList = list;
-              
+               garantipay.ReturnUrl = "https://abc.abc.com/abc";
                        
                        
                        
@@ -187,14 +185,14 @@
                garantiPayMORequest.Transaction.CardholderPresentCode = "0";
                garantiPayMORequest.Transaction.SubType = "sales";
 
-               garantiPayMORequest.Transaction.ReturnServerUrl = "";
+               garantiPayMORequest.Transaction.ReturnServerUrl = "https://abc.abc.com/abc";
                garantiPayMORequest.Transaction.GarantiPaYMO=garantipay;
                
                
-               String garantiPayMOResponse= GarantiPayMORequest.execute(garantiPayMORequest,settings); //ürün Bilgileri ile Satýnalma iþlemi servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
+               String garantiPayMOResponse= GarantiPayMORequest.execute(garantiPayMORequest,settings); //Garanti Pay Mail Order Ýle Ödeme servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
                StringWriter sw = new StringWriter();
                JAXB.marshal(garantiPayMOResponse, sw);
-               out.println("<pre>" + Helper.prettyPrintXml(sw.toString()) + "</pre>"); //"Ürün Bilgileri ile Satýnalma iþlemi servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
+               out.println("<pre>" + Helper.prettyPrintXml(sw.toString()) + "</pre>"); //"Garanti Pay Mail Order Ýle Ödeme servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
 	}
 %>
 

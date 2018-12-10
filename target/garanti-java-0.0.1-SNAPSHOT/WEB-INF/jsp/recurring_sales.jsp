@@ -132,7 +132,7 @@
                 recurringSalesRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 recurringSalesRequest.Customer= new Customer();
-                recurringSalesRequest.Customer.EmailAddr="fatih@codevist.com";
+                recurringSalesRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 recurringSalesRequest.Customer.IPAddress="127.0.0.1";
                 
                 
@@ -152,7 +152,8 @@
                recurringSalesRequest.Order.Recurring.FrequencyType="M";// tekrar tipi girilir. Günlük: D, Haftalýk: W, Aylýk: M, Yýllýk: Y
                recurringSalesRequest.Order.Recurring.Type="R"; // deðiþken tekrarlý iþlem tipi
                recurringSalesRequest.Order.Recurring.StartDate="20181201";// YYYYMMGG
-               
+               recurringSalesRequest.Order.Recurring.RecurringRetryAttemptCount = "10"; // red alan iþlemin kaç gün tekrarlanacaðý bilgisi
+               recurringSalesRequest.Order.Recurring.RetryAttemptEmail = "eticaret@garanti.com.tr"; // iþlem durumunun gönderileceði adres
               
                
                recurringSalesRequest.Transaction= new Transaction();

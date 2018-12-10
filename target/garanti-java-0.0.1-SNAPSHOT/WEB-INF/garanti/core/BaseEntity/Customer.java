@@ -15,6 +15,6 @@ public class Customer
 {
      @XmlElement(name = "IPAddress")
         public String IPAddress ;    
-     @XmlElement(name = "EmailAddr")
-        public String EmailAddr ;   
+     @XmlElement(name = "EmailAddress")
+        public String EmailAddress ;   
 }

@@ -89,7 +89,7 @@
                 rewardInquiryRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 rewardInquiryRequest.Customer= new Customer();
-                rewardInquiryRequest.Customer.EmailAddr="fatih@codevist.com";
+                rewardInquiryRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 rewardInquiryRequest.Customer.IPAddress="127.0.0.1";
                 
                 

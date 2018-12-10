@@ -121,7 +121,7 @@
                 recurringUpdateRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 recurringUpdateRequest.Customer= new Customer();
-                recurringUpdateRequest.Customer.EmailAddr="fatih@codevist.com";
+                recurringUpdateRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 recurringUpdateRequest.Customer.IPAddress="127.0.0.1";
                 
                 

@@ -117,7 +117,7 @@
                 salesWithCommentInfoRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 salesWithCommentInfoRequest.Customer= new Customer();
-                salesWithCommentInfoRequest.Customer.EmailAddr="fatih@codevist.com";
+                salesWithCommentInfoRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 salesWithCommentInfoRequest.Customer.IPAddress="127.0.0.1";
                 
                 
@@ -152,10 +152,10 @@
                
                
          
-               String salesWithCommentInfoResponse= SalesWithCommentInfoRequest.execute(salesWithCommentInfoRequest,settings); //Adres Bilgileri ile Satýnalma iþlemi servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
+               String salesWithCommentInfoResponse= SalesWithCommentInfoRequest.execute(salesWithCommentInfoRequest,settings); //Özel Alan Bilgileri ile Satýnalma iþlemi servisi baþlatýlmasý için gerekli servis çaðýrýsýný temsil eder."
                StringWriter sw = new StringWriter();
                JAXB.marshal(salesWithCommentInfoResponse, sw);
-               out.println("<pre>" + Helper.prettyPrintXml(sw.toString()) + "</pre>"); //"Adres Bilgileri ile Satýnalma iþlemi servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
+               out.println("<pre>" + Helper.prettyPrintXml(sw.toString()) + "</pre>"); //"Özel Alan ile Satýnalma iþlemi servis çaðrýsý sonucunda oluþan servis çýktý parametrelerinin ekranda gösterilmesini saðlar"
 	}
 %>
 
