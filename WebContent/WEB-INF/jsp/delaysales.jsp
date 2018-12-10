@@ -108,7 +108,7 @@
                 delaySalesRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 delaySalesRequest.Customer= new Customer();
-                delaySalesRequest.Customer.EmailAddr="fatih@codevist.com";
+                delaySalesRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 delaySalesRequest.Customer.IPAddress="127.0.0.1";
                 
                 

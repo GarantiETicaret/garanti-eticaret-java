@@ -125,7 +125,7 @@
                 garantiPayAppRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 garantiPayAppRequest.Customer= new Customer();
-                garantiPayAppRequest.Customer.EmailAddr="fatih@codevist.com";
+                garantiPayAppRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 garantiPayAppRequest.Customer.IPAddress="127.0.0.1";
                 
                 
@@ -169,7 +169,7 @@
                garantipay.InstallmentOnlyForCommercialCard = "N";
                garantipay.TotalInstallmentCount = "2";
                garantipay.GPInstallmentsList = list;
-              
+               garantipay.ReturnUrl = "https://abc.abc.com/abc";
                        
                        
                        
@@ -183,7 +183,7 @@
                garantiPayAppRequest.Transaction.CardholderPresentCode = "0";
                garantiPayAppRequest.Transaction.SubType = "sales";
 
-               garantiPayAppRequest.Transaction.ReturnServerUrl = "";
+               garantiPayAppRequest.Transaction.ReturnServerUrl = "https://abc.abc.com/abc";
                garantiPayAppRequest.Transaction.GarantiPaY=garantipay;
                
                

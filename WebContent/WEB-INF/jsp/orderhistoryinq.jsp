@@ -79,7 +79,7 @@
                 orderHistoryInqRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 orderHistoryInqRequest.Customer= new Customer();
-                orderHistoryInqRequest.Customer.EmailAddr="fatih@codevist.com";
+                orderHistoryInqRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 orderHistoryInqRequest.Customer.IPAddress="127.0.0.1";
                 
                 

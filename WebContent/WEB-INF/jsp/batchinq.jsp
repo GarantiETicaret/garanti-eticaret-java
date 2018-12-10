@@ -73,7 +73,7 @@
                batchInqRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                batchInqRequest.Customer= new Customer();
-               batchInqRequest.Customer.EmailAddr="fatih@codevist.com";
+               batchInqRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                batchInqRequest.Customer.IPAddress="127.0.0.1";
                 
                 

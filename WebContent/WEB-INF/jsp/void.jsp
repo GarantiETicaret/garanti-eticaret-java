@@ -105,7 +105,7 @@
                voidRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                voidRequest.Customer= new Customer();
-               voidRequest.Customer.EmailAddr="fatih@codevist.com";
+               voidRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                voidRequest.Customer.IPAddress="127.0.0.1";
                 
                 

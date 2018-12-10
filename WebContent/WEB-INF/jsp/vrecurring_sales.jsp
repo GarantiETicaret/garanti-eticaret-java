@@ -153,7 +153,7 @@
                 vrecurringSalesRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 vrecurringSalesRequest.Customer= new Customer();
-                vrecurringSalesRequest.Customer.EmailAddr="fatih@codevist.com";
+                vrecurringSalesRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 vrecurringSalesRequest.Customer.IPAddress="127.0.0.1";
                 
                 

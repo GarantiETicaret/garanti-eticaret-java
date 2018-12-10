@@ -95,7 +95,7 @@
                 commercialCardLimitInqRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 commercialCardLimitInqRequest.Customer= new Customer();
-                commercialCardLimitInqRequest.Customer.EmailAddr="fatih@codevist.com";
+                commercialCardLimitInqRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 commercialCardLimitInqRequest.Customer.IPAddress="127.0.0.1";
                 
                 

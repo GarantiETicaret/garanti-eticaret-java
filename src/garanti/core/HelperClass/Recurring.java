@@ -30,6 +30,10 @@ public class Recurring
     @XmlElement(name = "StartDate")
     public String StartDate;
     
+    @XmlElement(name = "RecurringRetryAttemptCount")
+    public String RecurringRetryAttemptCount;
+    @XmlElement(name = "RetryAttemptEmail")
+    public String RetryAttemptEmail;
     
     
     @XmlElementWrapper(name = "PaymentList")

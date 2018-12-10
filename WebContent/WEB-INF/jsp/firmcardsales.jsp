@@ -90,7 +90,7 @@
                 firmCardSalesRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 firmCardSalesRequest.Customer= new Customer();
-                firmCardSalesRequest.Customer.EmailAddr="fatih@codevist.com";
+                firmCardSalesRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 firmCardSalesRequest.Customer.IPAddress="127.0.0.1";
                 
                 

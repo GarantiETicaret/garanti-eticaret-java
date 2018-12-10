@@ -134,7 +134,7 @@
                 commercialCardExtendedCreditRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 commercialCardExtendedCreditRequest.Customer= new Customer();
-                commercialCardExtendedCreditRequest.Customer.EmailAddr="fatih@codevist.com";
+                commercialCardExtendedCreditRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 commercialCardExtendedCreditRequest.Customer.IPAddress="127.0.0.1";
                 
                 

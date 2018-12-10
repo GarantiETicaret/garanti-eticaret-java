@@ -118,7 +118,7 @@
                 salesWithProductInfoRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 salesWithProductInfoRequest.Customer= new Customer();
-                salesWithProductInfoRequest.Customer.EmailAddr="fatih@codevist.com";
+                salesWithProductInfoRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 salesWithProductInfoRequest.Customer.IPAddress="127.0.0.1";
                 
                 

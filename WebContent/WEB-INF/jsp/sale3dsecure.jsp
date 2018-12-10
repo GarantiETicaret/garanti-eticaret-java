@@ -104,7 +104,7 @@
                 
                 sale3DSecureRequest.successurl = "http://localhost:8084/garanti-java/success.htm";
                 sale3DSecureRequest.errorurl = "http://localhost:8084/garanti-java/error.htm";
-                sale3DSecureRequest.customeremailaddress = "fatih@codevist.com";
+                sale3DSecureRequest.customeremailaddress = "eticaret@garanti.com.tr";
                 
                 
                 sale3DSecureRequest.customeripaddress = "127.0.0.1";

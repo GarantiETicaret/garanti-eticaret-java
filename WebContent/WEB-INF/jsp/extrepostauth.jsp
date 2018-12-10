@@ -111,7 +111,7 @@
                 extrePostauthRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 extrePostauthRequest.Customer= new Customer();
-                extrePostauthRequest.Customer.EmailAddr="fatih@codevist.com";
+                extrePostauthRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 extrePostauthRequest.Customer.IPAddress="127.0.0.1";
                 
                 

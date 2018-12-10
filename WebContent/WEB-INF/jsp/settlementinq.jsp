@@ -77,7 +77,7 @@
                 settlementInqRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 settlementInqRequest.Customer= new Customer();
-                settlementInqRequest.Customer.EmailAddr="fatih@codevist.com";
+                settlementInqRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 settlementInqRequest.Customer.IPAddress="127.0.0.1";
                 
                 

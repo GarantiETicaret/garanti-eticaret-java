@@ -101,7 +101,7 @@
                 extendedCreditInquiryRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 extendedCreditInquiryRequest.Customer= new Customer();
-                extendedCreditInquiryRequest.Customer.EmailAddr="fatih@codevist.com";
+                extendedCreditInquiryRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 extendedCreditInquiryRequest.Customer.IPAddress="127.0.0.1";
                 
                 

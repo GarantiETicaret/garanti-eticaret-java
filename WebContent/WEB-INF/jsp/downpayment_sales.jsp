@@ -115,7 +115,7 @@
                 downPaymentSalesRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 downPaymentSalesRequest.Customer= new Customer();
-                downPaymentSalesRequest.Customer.EmailAddr="fatih@codevist.com";
+                downPaymentSalesRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 downPaymentSalesRequest.Customer.IPAddress="127.0.0.1";
                 
                 

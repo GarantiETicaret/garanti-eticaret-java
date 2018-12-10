@@ -108,7 +108,7 @@
                 gsmUnitInqRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 gsmUnitInqRequest.Customer= new Customer();
-                gsmUnitInqRequest.Customer.EmailAddr="fatih@codevist.com";
+                gsmUnitInqRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 gsmUnitInqRequest.Customer.IPAddress="127.0.0.1";
                 
                 

@@ -103,7 +103,7 @@
                 commercialCardPreauthRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 commercialCardPreauthRequest.Customer= new Customer();
-                commercialCardPreauthRequest.Customer.EmailAddr="fatih@codevist.com";
+                commercialCardPreauthRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 commercialCardPreauthRequest.Customer.IPAddress="127.0.0.1";
                 
                 

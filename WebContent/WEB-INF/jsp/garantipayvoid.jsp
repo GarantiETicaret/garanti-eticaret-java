@@ -102,7 +102,7 @@
             
             garantiPayVoidRequest.Customer= new Customer();
 
-            garantiPayVoidRequest.Customer.EmailAddr = "fatih@codevist.com";
+            garantiPayVoidRequest.Customer.EmailAddress = "eticaret@garanti.com.tr";
             garantiPayVoidRequest.Customer.IPAddress = "127.0.0.1";
             
             garantiPayVoidRequest.Order= new Order();

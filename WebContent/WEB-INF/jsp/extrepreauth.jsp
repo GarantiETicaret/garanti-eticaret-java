@@ -112,7 +112,7 @@
                 extrePreauthRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 extrePreauthRequest.Customer= new Customer();
-                extrePreauthRequest.Customer.EmailAddr="fatih@codevist.com";
+                extrePreauthRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 extrePreauthRequest.Customer.IPAddress="127.0.0.1";
                 
                 

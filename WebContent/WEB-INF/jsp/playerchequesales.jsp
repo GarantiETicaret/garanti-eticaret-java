@@ -131,7 +131,7 @@
                 playerChequeSalesRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 playerChequeSalesRequest.Customer= new Customer();
-                playerChequeSalesRequest.Customer.EmailAddr="fatih@codevist.com";
+                playerChequeSalesRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 playerChequeSalesRequest.Customer.IPAddress="127.0.0.1";
                 
                 

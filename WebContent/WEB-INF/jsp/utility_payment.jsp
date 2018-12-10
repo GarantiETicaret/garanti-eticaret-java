@@ -111,7 +111,7 @@
                 utilityPaymentRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 utilityPaymentRequest.Customer= new Customer();
-                utilityPaymentRequest.Customer.EmailAddr="fatih@codevist.com";
+                utilityPaymentRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 utilityPaymentRequest.Customer.IPAddress="127.0.0.1";
                 
                 

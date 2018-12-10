@@ -102,7 +102,7 @@
                 smsPreauthRequest.Terminal.MerchantID=terminal.MerchantID;
                 
                 smsPreauthRequest.Customer= new Customer();
-                smsPreauthRequest.Customer.EmailAddr="fatih@codevist.com";
+                smsPreauthRequest.Customer.EmailAddress="eticaret@garanti.com.tr";
                 smsPreauthRequest.Customer.IPAddress="127.0.0.1";
                 
                 

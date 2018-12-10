@@ -77,7 +77,7 @@
             //TODO: ERROR ADRESÝNÝ GÜNCELLE.
             garantiPayRequest.successurl = "http://localhost:8084/garanti-java/garantipaysuccess.htm";
             garantiPayRequest.errorurl = "http://localhost:8084/garanti-java/garantipayerror.htm";
-            garantiPayRequest.customeremailaddress = "fatih@codevist.com";
+            garantiPayRequest.customeremailaddress = "eticaret@garanti.com.tr";
             garantiPayRequest.customeripaddress = "127.0.0.1";
             garantiPayRequest.secure3dsecuritylevel = "CUSTOM_PAY";
             garantiPayRequest.orderid = request.getParameter("orderID");

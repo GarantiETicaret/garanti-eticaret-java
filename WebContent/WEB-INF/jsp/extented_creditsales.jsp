@@ -106,7 +106,7 @@
             //TODO: ERROR ADRESÝNÝ GÜNCELLE.
             sale3DPayRequest.successurl = "http://localhost:8084/garanti-java/oossuccess.htm";
             sale3DPayRequest.errorurl = "http://localhost:8084/garanti-java/ooserror.htm";
-            sale3DPayRequest.customeremailaddress = "fatih@codevist.com";
+            sale3DPayRequest.customeremailaddress = "eticaret@garanti.com.tr";
             sale3DPayRequest.customeripaddress = "127.0.0.1";
             sale3DPayRequest.secure3dsecuritylevel = "CUSTOM_PAY";
             sale3DPayRequest.orderid = request.getParameter("orderID");
