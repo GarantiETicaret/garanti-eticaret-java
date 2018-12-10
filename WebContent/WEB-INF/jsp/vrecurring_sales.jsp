@@ -173,7 +173,8 @@
                vrecurringSalesRequest.Order.Recurring.FrequencyType="M";// tekrar tipi girilir. Günlük: D, Haftalýk: W, Aylýk: M, Yýllýk: Y
                vrecurringSalesRequest.Order.Recurring.Type="R"; // deðiþken tekrarlý iþlem tipi
                vrecurringSalesRequest.Order.Recurring.StartDate="20181201";// YYYYMMGG
-               
+               vrecurringSalesRequest.Order.Recurring.RecurringRetryAttemptCount = "10"; // red alan iþlemin kaç gün tekrarlanacaðý bilgisi
+               vrecurringSalesRequest.Order.Recurring.RetryAttemptEmail = "eticaret@garanti.com.tr"; // iþlem durumunun gönderileceði adres
                vrecurringSalesRequest.Order.Recurring.Payment=new ArrayList<>();
                 
                Payment payment1 = new Payment();
